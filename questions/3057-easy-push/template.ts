@@ -1,1 +1,1 @@
-type Push<T, U> = any
+type Push<T extends any[], U extends any> = [...T, U]

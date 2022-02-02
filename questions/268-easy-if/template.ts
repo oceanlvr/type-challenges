@@ -1,1 +1,3 @@
-type If<C, T, F> = any
+type If<C extends boolean, T extends any, F extends any> = C extends true
+  ? T
+  : F

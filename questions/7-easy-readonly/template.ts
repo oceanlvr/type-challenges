@@ -1,1 +1,1 @@
-type MyReadonly<T> = any
+type MyReadonly<T extends {}> = { readonly [P in keyof T]: T[P] }

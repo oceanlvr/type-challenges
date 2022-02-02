@@ -1,4 +1,7 @@
 import { Equal, Expect } from '@type-challenges/utils'
+type t1 = MyPick<Todo, 'title'>
+type t2 = MyPick<Todo, 'title' | 'completed'>
+// type t3 = MyPick<Todo, 'title' | 'completed' | 'invalid'>
 
 type cases = [
   Expect<Equal<Expected1, MyPick<Todo, 'title'>>>,
